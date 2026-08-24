@@ -433,7 +433,13 @@ html[data-theme="light"] .case { background: var(--ink-2); }
 .footer-inner { display: flex; flex-wrap: wrap; gap: 10px 26px; justify-content: space-between; align-items: center; }
 .footer p { font-family: var(--mono); font-size: 12.2px; color: var(--dim); margin: 0; }
 .footer-links { display: flex; gap: 20px; }
-.footer-links a { font-family: var(--mono); font-size: 12.2px; color: var(--dim); text-decoration: none; }
+.footer-links a {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--mono); font-size: 12.2px; color: var(--dim); text-decoration: none;
+  transition: color .18s var(--ease);
+}
+.footer-links a svg { flex: none; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.footer-links a svg[fill="currentColor"] { fill: currentColor; stroke: none; }
 .footer-links a:hover { color: var(--cyan); }
 
 /* ── motion ─────────────────────────────────────────────── */
