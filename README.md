@@ -1,7 +1,7 @@
-# GitHub Showcase — Suraj Vaghela
+# GitHub Showcase: Suraj Vaghela
 
 A static portfolio site that walks recruiters through five projects without making the
-underlying repositories public. Plain HTML, CSS and JavaScript — no framework, no build step,
+underlying repositories public. Plain HTML, CSS and JavaScript: no framework, no build step,
 no dependencies.
 
 Live at **https://svog23.github.io/GithubShowcase/**
@@ -13,7 +13,7 @@ Live at **https://svog23.github.io/GithubShowcase/**
 Written for how recruiters actually read a portfolio: they scan for a few seconds, they are
 often not engineers, and they want to know what a thing does before how it was made.
 
-- **Project index in the hero.** All five projects — name, one line, status — sit on the first
+- **Project index in the hero.** All five projects (name, one line, status) sit on the first
   screen, so the page reads as project-first without any scrolling.
 - **Case-study blocks.** Each project is a short write-up plus a two-column panel: the problem
   on one side, what came of it on the other. Amber marks the problem, cyan the outcome, so
@@ -43,7 +43,7 @@ square image (roughly 600×600 or larger) using that exact filename.
 
 ## Local preview
 
-No build step — open `index.html` directly, or serve it:
+No build step. Open `index.html` directly, or serve it:
 
 ```bash
 python3 -m http.server 8000
@@ -61,9 +61,9 @@ GitHub Pages.
 
 ## Editing
 
-- **Content** — inline in `index.html`; each project is one `<article class="project">`.
-- **Colour and type** — the `:root` and `html[data-theme="light"]` token blocks at the top of
+- **Content**: inline in `index.html`; each project is one `<article class="project">`.
+- **Colour and type**: the `:root` and `html[data-theme="light"]` token blocks at the top of
   `assets/styles.css`.
-- **Adding a project** — copy an existing `<article class="project">`, give it a unique `id`, keep
+- **Adding a project**: copy an existing `<article class="project">`, give it a unique `id`, keep
   the `data-case` attribute so its divider and text animate on scroll, and add a matching row to
   the hero's project index.

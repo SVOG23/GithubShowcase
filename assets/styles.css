@@ -1,6 +1,6 @@
 /* ============================================================
-   Suraj Vaghela — portfolio
-   Direction: "the trust boundary". Two semantic accents —
+   Suraj Vaghela: portfolio
+   Direction: "the trust boundary". Two semantic accents:
    amber for what the client claims, cyan for what enforces it.
    Type: Bricolage Grotesque (display) + IBM Plex Sans/Mono.
    ============================================================ */
@@ -258,7 +258,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
   border: 1px solid var(--rule-2); border-radius: var(--r);
   background: var(--ink-3); overflow: hidden;
 }
-/* The portrait file is pre-cropped square, so cover is a no-op here — it is
+/* The portrait file is pre-cropped square, so cover is a no-op here; it is
    kept so a differently-shaped replacement still fills the frame instead of
    distorting. */
 .portrait-frame img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; display: block; }
