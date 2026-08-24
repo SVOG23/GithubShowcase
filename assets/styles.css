@@ -245,7 +245,14 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
 /* ── about ──────────────────────────────────────────────── */
 .about-grid { display: grid; grid-template-columns: 300px 1fr; gap: 52px; align-items: start; }
 
-.portrait { margin: 0; position: sticky; top: 108px; }
+/* Sticky positioning and a transform must not land on the same element: the
+   reveal animation would tween the very offset sticky is recomputing each
+   frame, which reads as jitter while the page smooth-scrolls to #about.
+   The wrapper does the sticking; the figure inside does the animating, and it
+   fades without moving so a pinned element never appears to drift. */
+.portrait-sticky { position: sticky; top: 96px; }
+.portrait { margin: 0; }
+.portrait.reveal { transform: none; }
 .portrait-frame {
   position: relative; aspect-ratio: 1; width: 100%;
   border: 1px solid var(--rule-2); border-radius: var(--r);
@@ -473,7 +480,8 @@ body.is-ready .hero-rule { transform: scaleX(1); }
   .hero { padding: 64px 0 60px; }
   .section { padding: 60px 0; }
   .about-grid { grid-template-columns: 1fr; gap: 30px; }
-  .portrait { position: static; max-width: 230px; }
+  .portrait-sticky { position: static; }
+  .portrait { max-width: 230px; }
   .role { grid-template-columns: 1fr; gap: 12px; }
   .role-date { padding-top: 0; }
   .case-head { display: none; }
