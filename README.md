@@ -9,10 +9,11 @@ no dependencies.
 ## Files
 
 ```
-index.html          the whole page
-assets/styles.css   design tokens, layout, light/dark themes
-assets/main.js      theme toggle, scroll-spy, reveal-on-scroll
-.nojekyll           serve files as-is (skips Jekyll processing)
+index.html                    the whole page
+assets/styles.css             design tokens, layout, light/dark themes
+assets/main.js                theme toggle, scroll-spy, reveal-on-scroll
+.nojekyll                     serve files as-is (skips Jekyll processing)
+.github/workflows/pages.yml   deploys to GitHub Pages on push to main
 ```
 
 ## Local preview
@@ -26,10 +27,11 @@ python3 -m http.server 8000
 
 ## Publishing to GitHub Pages
 
-1. Repository → **Settings** → **Pages**
-2. **Source:** *Deploy from a branch*
-3. **Branch:** `main` (or whichever branch holds this site), folder `/ (root)`
-4. Save. The site appears at `https://<username>.github.io/GithubShowcase/` within a minute or two.
+Deployment is automated. `.github/workflows/pages.yml` publishes the repository root to
+GitHub Pages on every push to `main` (and on manual dispatch). The workflow enables Pages
+itself the first time it runs, so there is nothing to click in Settings.
+
+Live at **https://svog23.github.io/GithubShowcase/**
 
 To serve it from a custom domain instead, add a `CNAME` file containing the domain and point a
 DNS record at GitHub Pages.
