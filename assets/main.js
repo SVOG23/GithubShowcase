@@ -29,6 +29,30 @@
     });
   }
 
+  /* ── portrait ──────────────────────────────────────────── */
+  // Try each candidate filename in turn so any common export works; if none
+  // resolves, the frame shows its monogram rather than a broken image.
+  (function () {
+    var img = document.getElementById('portrait');
+    if (!img) { return; }
+
+    var sources = (img.getAttribute('data-sources') || '').split(',').filter(Boolean);
+    var frame = img.closest('.portrait-frame');
+    var i = 0;
+
+    function next() {
+      if (i >= sources.length) {
+        if (frame) { frame.classList.add('is-empty'); }
+        img.remove();
+        return;
+      }
+      img.setAttribute('src', sources[i++]);
+    }
+
+    img.addEventListener('error', next);
+    next();
+  })();
+
   /* ── hero load sequence ────────────────────────────────── */
   // Each [data-seq] element carries its position in the opening sequence;
   // the CSS turns that into a transition-delay.
