@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Suraj Vaghela — Systems, shipped</title>
-<meta name="description" content="Suraj Vaghela builds mobile products and payment systems where the guarantees live in the database. Vouchlist, ModelMarketplace, unrot, Clipr.AI and Kivo — walked through in detail." />
+<title>Suraj Vaghela — Software Engineer</title>
+<meta name="description" content="Suraj Vaghela builds and ships software products — Vouchlist, ModelMarketplace, unrot, Clipr.AI and Kivo. Informatics student at the University of Washington and founder of ALPHABYTE." />
 <meta name="author" content="Suraj Vaghela" />
 <meta name="theme-color" content="#0A1A1E" />
-<meta property="og:title" content="Suraj Vaghela — Systems, shipped" />
-<meta property="og:description" content="Mobile products and payment systems where the guarantees live in the database, not the screen that asks for them." />
+<meta property="og:title" content="Suraj Vaghela — Software Engineer" />
+<meta property="og:description" content="I build products and ship them. An app on both app stores, a marketplace handling real payments, and an open-source developer tool." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://svog23.github.io/GithubShowcase/" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -50,59 +50,58 @@
     <p class="hero-eyebrow" data-seq="1">Suraj Vaghela · Seattle, WA · Founder, ALPHABYTE</p>
 
     <h1 class="hero-thesis">
-      <span class="line" data-seq="2"><span>“The client is</span></span>
-      <span class="line" data-seq="3"><span>assumed hostile.”</span></span>
+      <span class="line" data-seq="2"><span>I build products,</span></span>
+      <span class="line" data-seq="3"><span>and I ship them.</span></span>
     </h1>
 
     <div class="boundary-rule hero-rule" data-seq="4" aria-hidden="true"></div>
 
     <div class="hero-grid">
       <p class="hero-body" data-seq="5">
-        That line is a comment in my own codebase. I build mobile products and payment
-        systems where the guarantees — what something costs, who may read it, when the
-        clock starts — live in the database, not in the screen that asks for them.
+        I'm an informatics student at the University of Washington and the founder of
+        ALPHABYTE. I've put an app on the App Store and Google Play, built a marketplace
+        that handles real money, and released a developer tool anyone can install.
       </p>
       <p class="hero-meta" data-seq="5">
-        Informatics (Data&nbsp;Science) at the University of Washington. Five projects below:
-        one live on both app stores, one running real money through Stripe, one published
-        on npm.
+        Most of the code is private, so each project is written up here — what it does,
+        why it exists, and where it stands.
       </p>
     </div>
 
     <div class="hero-actions" data-seq="6">
-      <a class="btn btn-primary" href="#work">See the work</a>
+      <a class="btn btn-primary" href="#work">See the projects</a>
       <a class="btn" href="mailto:suvaghela23@gmail.com">Email</a>
       <a class="btn" href="https://www.linkedin.com/in/suvaghela" target="_blank" rel="noopener">LinkedIn</a>
       <a class="btn" href="https://github.com/SVOG23" target="_blank" rel="noopener">GitHub</a>
     </div>
 
-    <ul class="proof" data-seq="7">
-      <li>
-        <span class="proof-label">Shipped</span>
-        <span class="proof-value">App Store + Google Play</span>
-        <span class="proof-note">Vouchlist, built and submitted end to end</span>
-      </li>
-      <li>
-        <span class="proof-label">Published</span>
-        <span class="proof-value">npm — <code>unrot</code></span>
-        <span class="proof-note">MIT, CI-gated, 99.4% recall on injected defects</span>
-      </li>
-      <li>
-        <span class="proof-label">Payments</span>
-        <span class="proof-value">Three Stripe architectures</span>
-        <span class="proof-note">Checkout, Connect, subscriptions, manual capture</span>
-      </li>
-      <li>
-        <span class="proof-label">Funded</span>
-        <span class="proof-value">iStartup Lab Micro-Grant</span>
-        <span class="proof-note">University of Washington, 2026</span>
-      </li>
-    </ul>
-
-    <p class="hero-disclosure" data-seq="7">
-      Four of these repositories are private. This page is the walkthrough — architecture,
-      trade-offs, and the guarantees each system actually enforces. Happy to screen-share the code.
-    </p>
+    <nav class="index" data-seq="7" aria-label="Projects">
+      <a href="#vouchlist">
+        <span class="index-name">Vouchlist</span>
+        <span class="index-desc">Local recommendations from people you actually know</span>
+        <span class="index-status status-live">Live on iOS &amp; Android</span>
+      </a>
+      <a href="#modelmarketplace">
+        <span class="index-name">ModelMarketplace</span>
+        <span class="index-desc">A marketplace for machine-learning models</span>
+        <span class="index-status status-award">Grant-funded</span>
+      </a>
+      <a href="#unrot">
+        <span class="index-name">unrot</span>
+        <span class="index-desc">Keeps AI coding assistants from following stale instructions</span>
+        <span class="index-status status-live">Free and open source</span>
+      </a>
+      <a href="#clipr">
+        <span class="index-name">Clipr.AI</span>
+        <span class="index-desc">See a haircut on yourself before anyone picks up scissors</span>
+        <span class="index-status">In development</span>
+      </a>
+      <a href="#kivo">
+        <span class="index-name">Kivo</span>
+        <span class="index-desc">Rent sports gear from people nearby, by the hour</span>
+        <span class="index-status">Ready to launch</span>
+      </a>
+    </nav>
   </div>
 </section>
 
@@ -111,7 +110,7 @@
   <div class="wrap">
     <header class="section-head reveal">
       <p class="label">About</p>
-      <h2>Someone has to own the boring guarantees.</h2>
+      <h2>I like the part where it reaches real people.</h2>
     </header>
 
     <div class="about-grid">
@@ -126,26 +125,30 @@
 
       <div class="about-copy reveal">
         <p class="lede">
-          I'm a Seattle-based engineer studying Informatics with a Data Science focus at the
+          I'm a Seattle-based engineer studying informatics with a data science focus at the
           University of Washington, and the founder of ALPHABYTE.
         </p>
         <p>
-          Most of my time goes into taking a product the whole distance — schema and access
-          policies, the API and webhook layer, the mobile client, then the store review queue.
-          What I keep coming back to is the unglamorous half: money that can't be
-          double-charged, a booking that can't be double-made, an address a stranger can't read.
-          Those are the parts that decide whether something survives real users, and they don't
-          survive being written in the client.
+          What I enjoy is taking an idea all the way — sitting with the problem, designing how
+          it should work, building it, and then getting it in front of people. A project doesn't
+          feel finished to me until someone who isn't me is using it. That's why the work below
+          is products rather than exercises: an app you can download today, a marketplace that
+          moves real money, a tool other developers can install.
         </p>
         <p>
-          Before ALPHABYTE I trained a recommender on 6,000+ support tickets at CloudifyAI
-          Solutions and researched spiking neural networks with Tech Mahindra's Makers Lab AI
-          team. I work daily with AI coding agents — Claude Code, Codex, Gemini — which is how I
-          ended up writing a linter for the config files that steer them.
+          I care most about the parts users never see but always feel — that payments are
+          correct, that private information stays private, that things keep working when
+          something goes wrong. Getting those right is what separates a demo from a product.
+        </p>
+        <p>
+          Before ALPHABYTE I built a system at CloudifyAI Solutions that helped a support team
+          answer customers faster, and I researched energy-efficient AI at Tech Mahindra's
+          Makers Lab. I also work daily with AI coding tools, which is how I ended up building
+          one of my own.
         </p>
         <p class="about-ask">
-          I'm looking for software engineering and ML internships or new-grad roles where I can
-          own something end to end.
+          I'm looking for software engineering and machine learning internships or new-grad
+          roles where I can own something end to end.
         </p>
 
         <div class="about-cards">
@@ -157,12 +160,6 @@
               <li>Dean's List — 2024, 2025, 2026</li>
               <li>iStartup Lab Micro-Grant, 2026</li>
             </ul>
-            <p class="label label-inline">Coursework</p>
-            <p class="mini-course">
-              Data Structures &amp; Algorithms · Machine Learning · Artificial Intelligence ·
-              Client-Side Development · Intermediate Data Programming ·
-              Statistical Methods · Research Methods
-            </p>
           </div>
           <div class="mini-card">
             <p class="label">Certification</p>
@@ -179,71 +176,49 @@
 <section class="section section-work" id="work">
   <div class="wrap">
     <header class="section-head reveal">
-      <p class="label">Selected work</p>
-      <h2>Five systems, and what each one refuses to take on trust.</h2>
+      <p class="label">Projects</p>
+      <h2>Five things I've built.</h2>
       <p class="section-sub">
-        Every project below carries a ledger: what the client is allowed to ask for, and what
-        actually decides the answer.
+        Each one started as a problem worth solving. Here's what it does and where it stands —
+        happy to go deeper on any of them.
       </p>
     </header>
 
-    <!-- ── VOUCHLIST ── -->
     <article class="project reveal" id="vouchlist">
       <header class="project-head">
         <h3 class="project-title">Vouchlist</h3>
         <div class="project-tags">
-          <span class="tag tag-live">Live · iOS &amp; Android</span>
+          <span class="tag tag-live">Live on iOS &amp; Android</span>
           <span class="tag">ALPHABYTE</span>
         </div>
       </header>
-      <p class="project-tagline">Local recommendations that come from people you actually know.</p>
+      <p class="project-tagline">Local recommendations from people you actually know.</p>
 
       <div class="project-links">
-        <a class="jump jump-go" href="https://www.vouchlist.app/" target="_blank" rel="noopener">
-          vouchlist.app<span class="jump-arrow" aria-hidden="true">↗</span>
-        </a>
-        <span class="jump jump-locked">Private repository</span>
+        <a class="jump jump-go" href="https://www.vouchlist.app/" target="_blank" rel="noopener">vouchlist.app<span class="jump-arrow" aria-hidden="true">↗</span></a>
+        <span class="jump jump-locked">Code kept private</span>
       </div>
 
-      <p class="project-desc">
-        Vouchlist replaces the anonymous five-star review with a <em>vouch</em> from someone in
-        your circle. You find a plumber, a restaurant or a trip because a real person you're
-        connected to stood behind it. Three domains — Home Services, Food &amp; Drinks, Travel —
-        each with its own capture flow and detail schema, all sharing one social graph. I designed,
-        built and shipped it end to end, through Apple and Google review.
-      </p>
+      <p class="project-desc">Vouchlist replaces the anonymous five-star review with a recommendation from someone in your circle. You find a plumber, a restaurant or a place to travel because a real person you know stood behind it. I designed and built the whole product and took it through both app store reviews.</p>
 
-      <div class="ledger" data-ledger>
-        <div class="ledger-head">
-          <span class="ledger-col-a">The app asks for</span>
-          <span class="ledger-col-b">What decides</span>
+      <div class="case" data-case>
+        <div class="case-head">
+          <span class="case-col-a">The problem</span>
+          <span class="case-col-b">What came of it</span>
         </div>
-        <div class="ledger-rule" aria-hidden="true"></div>
-        <ul class="ledger-rows">
-          <li><span class="claim">A pro's listing</span><span class="enforced">Row-level security + circle membership</span></li>
-          <li><span class="claim">Your phone contacts</span><span class="enforced">Salted SHA-256 hashes — never a readable book</span></li>
-          <li><span class="claim">Entry to a circle</span><span class="enforced">Server-issued invite code, 7-day expiry</span></li>
-          <li><span class="claim">An edge function</span><span class="enforced"><code>verify_jwt</code>, declared in config</span></li>
-        </ul>
+        <div class="case-rule" aria-hidden="true"></div>
+        <div class="case-body">
+          <p class="case-problem">Online reviews are anonymous and easy to fake, so it's hard to know who is actually behind a rating. Meanwhile the people whose taste you genuinely trust — friends, neighbours, family — aren't the ones writing them.</p>
+          <p class="case-result">Live on the App Store and Google Play, covering home services, restaurants and travel. Friends are matched privately, so people can find who they know without handing over their contacts.</p>
+        </div>
       </div>
 
-      <ul class="notes">
-        <li><b>Privacy-preserving friend discovery.</b> Contacts match on salted SHA-256 phone hashes, so the graph resolves the moment a hash matches a profile without the server ever holding a readable phone book.</li>
-        <li><b>Phone-OTP auth</b> via Twilio Verify over Supabase Auth, with a five-step onboarding gate whose routing decision is a pure, unit-tested selector rather than a tangle of effects.</li>
-        <li><b>~20 Postgres tables, RLS on every one</b> — circles, memberships, invites, contact graph, per-domain detail tables, block lists.</li>
-        <li><b>26 screens on 10 React Context providers + TanStack Query</b>, each a <code>[Provider, useHook]</code> tuple with optimistic writes and explicit invalidation.</li>
-        <li><b>An auditable trust boundary.</b> Every edge function's <code>verify_jwt</code> is declared in config, so the public/private split shows up in a diff; the public weekly-digest job is bounded by an atomic once-per-6-days gate and reads no request input.</li>
-        <li><b>Shipped through CI.</b> EAS Build and EAS Submit to both stores, with Sentry and PostHog wired into the release build.</li>
-      </ul>
-
-      <ul class="stack">
-        <li>TypeScript</li><li>React Native</li><li>Expo Router</li><li>Supabase</li>
-        <li>PostgreSQL + RLS</li><li>Deno Edge Functions</li><li>TanStack Query</li>
-        <li>Twilio Verify</li><li>EAS</li><li>Sentry</li><li>PostHog</li>
-      </ul>
+      <dl class="facts">
+        <div><dt>My role</dt><dd>Founder — design, product and engineering</dd></div>
+        <div><dt>Built with</dt><dd>TypeScript · React Native · Supabase · PostgreSQL</dd></div>
+      </dl>
     </article>
 
-    <!-- ── MODELMARKETPLACE ── -->
     <article class="project reveal" id="modelmarketplace">
       <header class="project-head">
         <h3 class="project-title">ModelMarketplace</h3>
@@ -252,212 +227,133 @@
           <span class="tag">ALPHABYTE</span>
         </div>
       </header>
-      <p class="project-tagline">A two-sided marketplace for trained ML models — buy it, or win it at auction.</p>
+      <p class="project-tagline">A marketplace where developers sell the machine-learning models they have trained.</p>
 
       <div class="project-links">
-        <span class="jump jump-locked">Private repository</span>
+        <span class="jump jump-locked">Code kept private</span>
       </div>
 
-      <p class="project-desc">
-        Practitioners list trained models; buyers acquire them outright or win them at auction.
-        Underneath the product it's an exercise in building real payments on Stripe with
-        server-side guarantees — multi-flow checkout, webhook reconciliation, and business rules
-        that live in Postgres. The University of Washington awarded it a micro-grant for market
-        viability and architectural rigor.
-      </p>
+      <p class="project-desc">Training a good model takes real time and skill, but there's no obvious place to sell one. ModelMarketplace gives developers somewhere to list their work and gives buyers a trustworthy way to pay for it.</p>
 
-      <div class="ledger" data-ledger>
-        <div class="ledger-head">
-          <span class="ledger-col-a">The client asks for</span>
-          <span class="ledger-col-b">What decides</span>
+      <div class="case" data-case>
+        <div class="case-head">
+          <span class="case-col-a">The problem</span>
+          <span class="case-col-b">What came of it</span>
         </div>
-        <div class="ledger-rule" aria-hidden="true"></div>
-        <ul class="ledger-rows">
-          <li><span class="claim">A new listing</span><span class="enforced"><code>enforce_listing_limit</code> — 3 / 25 / unlimited</span></li>
-          <li><span class="claim">A re-list</span><span class="enforced"><code>enforce_relist_cooldown</code> — 1 hour, re-checks quota</span></li>
-          <li><span class="claim">A completed purchase</span><span class="enforced"><code>finalize_model_purchase</code>, keyed on the session id</span></li>
-          <li><span class="claim">A payout</span><span class="enforced">A connected Stripe account, required at insert</span></li>
-        </ul>
+        <div class="case-rule" aria-hidden="true"></div>
+        <div class="case-body">
+          <p class="case-problem">Developers who train genuinely useful models have nowhere natural to sell them, and buyers have no safe way to pay for something they can't inspect first.</p>
+          <p class="case-result">Three ways to buy — outright, by subscription, or by bidding at auction — with payments, seller payouts and refunds all handled automatically. The University of Washington backed it with an iStartup Lab Micro-Grant for market viability and engineering quality.</p>
+        </div>
       </div>
 
-      <ul class="notes">
-        <li><b>One webhook, three flows.</b> Purchase, auction settlement and tier subscription all land in a single handler and dispatch on a <code>transaction_type</code> tag — set on both the Checkout Session <em>and</em> <code>subscription_data</code>, because subscription lifecycle events only ever see the latter.</li>
-        <li><b>Atomic, idempotent fulfillment.</b> Transaction insert, model claim, ownership transfer, ledger append and seller stats commit together inside one Postgres function keyed on a unique session id — so Stripe retries heal partial failures and duplicate events can't double-fulfill.</li>
-        <li><b>Anti-abuse in the database, not the UI.</b> Triggers enforce per-tier quotas and the re-list cooldown; a unique partial index blocks duplicate active titles. The API translates the resulting error codes into human messages.</li>
-        <li><b>Re-listing flips ownership instead of duplicating rows</b>, keeping downloads, reviews and history attached to one model identity across resales — which needed an RLS policy permitting the write from the current seller <em>or</em> the current owner.</li>
-        <li><b>No hardcoded Price IDs.</b> One-time and auction charges build <code>price_data</code> inline; subscriptions reuse a Price per (tier, interval, amount) via a <code>lookup_key</code>, so abandoned checkouts don't litter the account.</li>
-        <li><b>Three Supabase clients, chosen deliberately</b> — browser, cookie-aware SSR, and service-role for webhooks — kept in separate files, because mixing them silently breaks either auth or RLS.</li>
-      </ul>
-
-      <ul class="stack">
-        <li>Next.js 14</li><li>React 18</li><li>TypeScript</li><li>Supabase</li>
-        <li>Postgres + RLS</li><li>Stripe Checkout</li><li>Stripe Connect</li>
-        <li>Subscriptions</li><li>Webhooks</li><li>Recharts</li>
-      </ul>
+      <dl class="facts">
+        <div><dt>My role</dt><dd>Founder — product and engineering</dd></div>
+        <div><dt>Built with</dt><dd>Next.js · TypeScript · Stripe · PostgreSQL</dd></div>
+      </dl>
     </article>
 
-    <!-- ── UNROT ── -->
     <article class="project reveal" id="unrot">
       <header class="project-head">
         <h3 class="project-title">unrot</h3>
         <div class="project-tags">
-          <span class="tag tag-open">Open source · MIT</span>
-          <span class="tag">npm</span>
+          <span class="tag tag-open">Free and open source</span>
+          <span class="tag">Developer tool</span>
         </div>
       </header>
-      <p class="project-tagline">A linter for the config files that steer your AI coding agents.</p>
+      <p class="project-tagline">Catches out-of-date instructions before they mislead an AI coding assistant.</p>
 
       <div class="project-links">
-        <a class="jump jump-go" href="https://github.com/unrot-dev/unrot" target="_blank" rel="noopener">
-          github.com/unrot-dev/unrot<span class="jump-arrow" aria-hidden="true">↗</span>
-        </a>
-        <a class="jump jump-go" href="https://www.npmjs.com/package/unrot" target="_blank" rel="noopener">
-          npm i -D unrot<span class="jump-arrow" aria-hidden="true">↗</span>
-        </a>
+        <a class="jump jump-go" href="https://github.com/unrot-dev/unrot" target="_blank" rel="noopener">See it on GitHub<span class="jump-arrow" aria-hidden="true">↗</span></a>
+        <a class="jump jump-go" href="https://www.npmjs.com/package/unrot" target="_blank" rel="noopener">Install it<span class="jump-arrow" aria-hidden="true">↗</span></a>
       </div>
 
-      <p class="project-desc">
-        Agent configs rot. The repo moves on — files get renamed, scripts get replaced, conventions
-        change — while <code>CLAUDE.md</code>, <code>AGENTS.md</code> and <code>.cursorrules</code>
-        quietly keep describing a codebase that no longer exists. Nothing checks them. unrot does:
-        static analysis plus git history, no network calls, no telemetry, no LLM calls, and it never
-        modifies your files. <code>npx unrot check</code> works at the root of any repo with zero config.
-      </p>
+      <p class="project-desc">Teams now write instruction files to tell AI coding assistants how their project works. Then the project changes and the instructions don't. unrot reads those files, checks them against the actual code, and reports what no longer lines up.</p>
 
-      <div class="ledger" data-ledger>
-        <div class="ledger-head">
-          <span class="ledger-col-a">The config claims</span>
-          <span class="ledger-col-b">What decides</span>
+      <div class="case" data-case>
+        <div class="case-head">
+          <span class="case-col-a">The problem</span>
+          <span class="case-col-b">What came of it</span>
         </div>
-        <div class="ledger-rule" aria-hidden="true"></div>
-        <ul class="ledger-rows">
-          <li><span class="claim">“See <code>docs/setup.md</code>”</span><span class="enforced">The file tree — and a “did you mean…” if it moved</span></li>
-          <li><span class="claim">“Run <code>npm run build</code>”</span><span class="enforced"><code>package.json</code> — is that script real?</span></li>
-          <li><span class="claim">“This is how the repo works”</span><span class="enforced">git history — 90 days idle, 100 commits on</span></li>
-          <li><span class="claim">“Follow every rule here”</span><span class="enforced">Line count — models drop rules past ~200</span></li>
-        </ul>
+        <div class="case-rule" aria-hidden="true"></div>
+        <div class="case-body">
+          <p class="case-problem">An AI assistant following stale instructions confidently does the wrong thing, and nobody notices, because nothing ever checks whether those instructions are still true.</p>
+          <p class="case-result">Released free and open source for anyone to install. I tested it against 69 well-known open-source projects — Microsoft's VS Code and OpenAI's Codex among them — where it found instructions pointing at files that had been deleted or renamed. In testing it catches 99% of the problems it's designed to find.</p>
+        </div>
       </div>
 
-      <ul class="notes">
-        <li><b>Seven rules with teeth</b> — broken references with rename recovery, oversized instruction files, cross-file contradictions, staleness weighed against commit volume, eager <code>@</code>-imports, personal paths in committed configs, and repos with no agent config at all.</li>
-        <li><b>Deliberately forgiving heuristics.</b> Broken-refs excuses monorepo-relative paths, build artifacts, gitignored-but-present files, placeholders, package specifiers and hedged “if it exists” phrasing — so every reported error is worth fixing.</li>
-        <li><b>Measured, not asserted.</b> On a 20-repo held-out corpus spanning Java, PHP, C#, Ruby, Go, C++ and Swift — ecosystems the rules were never tuned on — 15 of 16 error-level findings held up by hand. A mutation harness puts recall at <b>354/356</b> injected defects, with <b>440/440</b> negative controls staying quiet.</li>
-        <li><b>Found real rot in the wild</b> across 69 open-source repos: dead source references in VS Code's Copilot config, a nonexistent path in OpenAI's Codex <code>AGENTS.md</code>, and a committed instruction pointing at one maintainer's laptop.</li>
-        <li><b>Fleet mode</b> scans a whole GitHub org concurrently and grades each repo A–D in one health report. Strictly read-only — it never opens PRs.</li>
-        <li><b>Built to be a CI gate</b> — versioned JSON schema, meaningful exit codes, and a copy-paste GitHub Actions job.</li>
-      </ul>
-
-      <ul class="stack">
-        <li>TypeScript</li><li>Node.js</li><li>CLI design</li><li>Static analysis</li>
-        <li>Git internals</li><li>npm publishing</li><li>GitHub Actions</li>
-      </ul>
+      <dl class="facts">
+        <div><dt>My role</dt><dd>Creator and maintainer</dd></div>
+        <div><dt>Built with</dt><dd>TypeScript · Node.js</dd></div>
+      </dl>
     </article>
 
-    <!-- ── CLIPR.AI ── -->
     <article class="project reveal" id="clipr">
       <header class="project-head">
         <h3 class="project-title">Clipr.AI</h3>
         <div class="project-tags">
           <span class="tag tag-build">In development</span>
-          <span class="tag">Computer vision</span>
+          <span class="tag">AI</span>
         </div>
       </header>
-      <p class="project-tagline">Scan your hair, preview the cut, get the spec, then cut it yourself.</p>
+      <p class="project-tagline">See a haircut on yourself before anyone picks up the scissors.</p>
 
       <div class="project-links">
-        <span class="jump jump-locked">Private repository</span>
+        <span class="jump jump-locked">Code kept private</span>
       </div>
 
-      <p class="project-desc">
-        Six stages — <b>scan, understand, preview, specify, cut, verify</b>. You capture your hair
-        from five guided angles, an AI analysis describes your current cut, you pick a target and
-        preview it on yourself, then get a precise Barber Card and a step-by-step Cut Coach. Rescan
-        afterwards and the app compares the real result against the target. The long game is a
-        consented dataset mapping <code>current hair → target spec → actual result</code>.
-      </p>
+      <p class="project-desc">Clipr scans your hair from a few angles, shows you what a new cut would actually look like on you, and turns your choice into clear instructions — either a card to hand your barber or step-by-step guidance to cut it yourself.</p>
 
-      <div class="ledger" data-ledger>
-        <div class="ledger-head">
-          <span class="ledger-col-a">The app asks for</span>
-          <span class="ledger-col-b">What decides</span>
+      <div class="case" data-case>
+        <div class="case-head">
+          <span class="case-col-a">The problem</span>
+          <span class="case-col-b">What came of it</span>
         </div>
-        <div class="ledger-rule" aria-hidden="true"></div>
-        <ul class="ledger-rows">
-          <li><span class="claim">Someone's scan photos</span><span class="enforced">RLS + per-user folders in a private bucket</span></li>
-          <li><span class="claim">A hair analysis</span><span class="enforced">The inference service — the mock fails closed</span></li>
-          <li><span class="claim">A preview render</span><span class="enforced">A provider chosen by env, never a silent fallback</span></li>
-          <li><span class="claim">A haircut</span><span class="enforced">HaircutSpec v1, shared by all four surfaces</span></li>
-        </ul>
+        <div class="case-rule" aria-hidden="true"></div>
+        <div class="case-body">
+          <p class="case-problem">Describing the haircut you want is genuinely hard. A photo of someone else rarely translates to your hair, and "a bit shorter on the sides" means something different to every barber.</p>
+          <p class="case-result">A working app that takes you from a scan to a preview to instructions either you or your barber can follow, then compares the real result against what you asked for.</p>
+        </div>
       </div>
 
-      <ul class="notes">
-        <li><b>One spec as the source of truth.</b> HaircutSpec v1 is a versioned schema shared by preview generation, the Barber Card, the Cut Coach and any future model — so the four surfaces can't drift into describing different haircuts.</li>
-        <li><b>Every AI capability sits behind a provider interface</b> — segmentation, pose, analysis, preview — each with a working mock. Real providers (a vision LLM, FLUX.2, MediaPipe) activate purely through environment variables.</li>
-        <li><b>Mocks that fail closed.</b> Hair analysis refuses to emit a canned result, and once a real inference URL is set nothing falls back to a mock — a dead service fails loudly instead of quietly serving fiction.</li>
-        <li><b>Photos of your face are treated as such.</b> The client holds only an anon key, storage is private with per-user folder policies, RLS covers every table, and captures are downscaled on-device before upload.</li>
-        <li><b>Security tested as data.</b> An RLS suite driven through PostgREST, a full end-to-end data-journey test, and a SQL suite run inside the database with <code>ON_ERROR_STOP</code> so a missing privilege fails the run instead of skipping it.</li>
-        <li><b>Honest scope.</b> The docs ship a limitations table — no AR measurement, per-view rather than joint multi-view generation — because overstating what a model does is how demos become liabilities.</li>
-      </ul>
-
-      <ul class="stack">
-        <li>React Native · Expo</li><li>TypeScript</li><li>Python · FastAPI</li>
-        <li>Supabase</li><li>MediaPipe</li><li>Vision LLM</li><li>FLUX.2</li>
-        <li>Docker</li><li>pytest · Jest</li>
-      </ul>
+      <dl class="facts">
+        <div><dt>My role</dt><dd>Founder — product and engineering</dd></div>
+        <div><dt>Built with</dt><dd>React Native · Python · AI image generation</dd></div>
+      </dl>
     </article>
 
-    <!-- ── KIVO ── -->
     <article class="project reveal" id="kivo">
       <header class="project-head">
         <h3 class="project-title">Kivo</h3>
         <div class="project-tags">
-          <span class="tag tag-build">MVP complete</span>
+          <span class="tag tag-build">Ready to launch</span>
           <span class="tag">Marketplace</span>
         </div>
       </header>
-      <p class="project-tagline">Peer-to-peer sports equipment rental, billed by the minute.</p>
+      <p class="project-tagline">Rent sports gear from people nearby, by the hour.</p>
 
       <div class="project-links">
-        <span class="jump jump-locked">Private repository</span>
+        <span class="jump jump-locked">Code kept private</span>
       </div>
 
-      <p class="project-desc">
-        Find gear near you on a map, rent it by the hour, verify pickup with a code, play, verify
-        the return, and pay for the minutes you actually used. One account both rents and lends.
-        What makes it a marketplace rather than a form is that none of the money is decided on the
-        phone — the client is trusted with a listing id and a time window, and nothing else.
-      </p>
+      <p class="project-desc">Kivo turns idle equipment into something rentable. Find gear near you on a map, book it, confirm the handover in person with a code, play, and pay only for the time you actually used. One account both rents and lends.</p>
 
-      <div class="ledger" data-ledger>
-        <div class="ledger-head">
-          <span class="ledger-col-a">The client sends</span>
-          <span class="ledger-col-b">What decides</span>
+      <div class="case" data-case>
+        <div class="case-head">
+          <span class="case-col-a">The problem</span>
+          <span class="case-col-b">What came of it</span>
         </div>
-        <div class="ledger-rule" aria-hidden="true"></div>
-        <ul class="ledger-rows">
-          <li><span class="claim">A price</span><span class="enforced"><code>quote_reservation()</code>, read from the listing</span></li>
-          <li><span class="claim">A rental start</span><span class="enforced"><code>picked_up_at</code>, stamped when the PIN verifies</span></li>
-          <li><span class="claim">An amount to charge</span><span class="enforced">Recomputed in SQL at return, then captured</span></li>
-          <li><span class="claim">A commission</span><span class="enforced"><code>platform_fee_bps</code>, in a schema the client can't reach</span></li>
-          <li><span class="claim">A pickup address</span><span class="enforced">Owner, or a renter with a live booking</span></li>
-          <li><span class="claim">A free time slot</span><span class="enforced"><code>EXCLUDE USING gist</code> — overlap is impossible</span></li>
-        </ul>
+        <div class="case-rule" aria-hidden="true"></div>
+        <div class="case-body">
+          <p class="case-problem">Trying a new sport means buying equipment you might use twice — while the gear other people already own sits unused in their garages.</p>
+          <p class="case-result">A complete marketplace: map search, hourly booking, in-person handover codes, automatic payment for the exact time used, and payouts to owners. Built and tested end to end.</p>
+        </div>
       </div>
 
-      <ul class="notes">
-        <li><b>Double booking is a constraint, not a code path.</b> A GiST exclusion constraint over listing and time range makes two overlapping live bookings impossible whatever the app does.</li>
-        <li><b>A two-sided PIN handshake.</b> The lender shows a pickup PIN the renter enters; the renter shows a return PIN the lender enters — neither party can move the clock alone. The PINs sit in a table with RLS on, zero policies and zero grants, unreachable through the API under any role; the only way in is a function that checks who's asking and enforces attempt limits and lockout.</li>
-        <li><b>Home addresses stay hidden.</b> Exact locations live in their own table visible only to the owner and a renter with a live booking; the public listing carries a deterministically jittered point (120–250 m, seeded from the listing id) so it can't be averaged away by polling.</li>
-        <li><b>Manual-capture Connect destination charges.</b> Reserving authorizes a hold; returning captures only the minutes used with commission as an application fee; overtime becomes its own off-session intent, because an authorization can't be captured beyond what it reserved. Every Stripe call carries a reservation-derived idempotency key, and webhooks claim the event id on a primary key before any handler runs.</li>
-        <li><b>Money and the clock are decoupled on purpose.</b> The return PIN closes the rental whether or not Stripe is reachable; capture is a retriable follow-up.</li>
-        <li><b>A hostile-client regression suite.</b> Sixteen attacks — reading a stranger's address, inventing a price, rewriting totals, reading the counterparty's PIN, double booking — asserted to be refused, exiting non-zero on regression. It caught three real bugs, including a policy scoped to <code>updated_at</code> that silently re-opened access to a stranger's home address on any later row touch.</li>
-      </ul>
-
-      <ul class="stack">
-        <li>React Native · Expo 57</li><li>TypeScript</li><li>Supabase</li>
-        <li>Postgres + RLS</li><li>Edge Functions</li><li>Realtime</li>
-        <li>Stripe Connect</li><li>TanStack Query</li><li>Reanimated</li>
-      </ul>
+      <dl class="facts">
+        <div><dt>My role</dt><dd>Founder — product and engineering</dd></div>
+        <div><dt>Built with</dt><dd>React Native · TypeScript · Stripe · PostgreSQL</dd></div>
+      </dl>
     </article>
 
   </div>
@@ -478,11 +374,10 @@
           <h3>Founder</h3>
           <p class="role-org">ALPHABYTE · Seattle, WA</p>
           <ul>
-            <li>Shipped Vouchlist, a full-stack mobile app, to the Apple App Store and Google Play Store.</li>
-            <li>Built it with TypeScript, React Native, Expo, Deno, PostgreSQL and Supabase, using EAS Build and EAS Submit for CI/CD.</li>
-            <li>Designed a secure backend with row-level security policies and serverless edge functions, implementing phone-OTP authentication (Twilio Verify + Supabase Auth) and SHA-256 contact hashing for privacy-preserving friend discovery.</li>
-            <li>Architected client-side state across 26 screens using 10 React Context providers and TanStack Query, backed by ~20 Supabase tables.</li>
-            <li>Applied AI coding agents and LLM harnesses — Claude Code, Codex, Gemini — to accelerate system design, implementation and debugging.</li>
+            <li>Founded the company and shipped Vouchlist, a mobile app, to both the Apple App Store and Google Play.</li>
+            <li>Designed and built the product end to end — the app people use, the systems behind it, and the release process that gets updates out.</li>
+            <li>Built friend-matching that connects people privately, without the app ever holding a readable copy of anyone's contacts.</li>
+            <li>Work daily with AI coding tools to move faster on design, implementation and debugging.</li>
           </ul>
         </div>
       </li>
@@ -493,8 +388,8 @@
           <h3>Software Engineer Intern</h3>
           <p class="role-org">CloudifyAI Solutions, Inc. · Seattle, WA</p>
           <ul>
-            <li>Developed and deployed a recommender system trained on 6,000+ historical customer tickets to suggest relevant solutions, improving response times and reducing support-team workload.</li>
-            <li>Automated customer support workflows in n8n, integrating the recommender with ticketing systems to deliver recommendations directly to customers or support agents.</li>
+            <li>Built and launched a system trained on 6,000+ past support tickets that suggests the right answer automatically — cutting response times and taking routine work off the support team.</li>
+            <li>Connected it to the tools the team already used, so suggestions reached customers and agents without anyone changing how they worked.</li>
           </ul>
         </div>
       </li>
@@ -505,8 +400,8 @@
           <h3>Machine Learning Research Intern</h3>
           <p class="role-org">Tech Mahindra · Redmond, WA</p>
           <ul>
-            <li>Researched and documented spiking neural network fundamentals — spike-based signaling, temporal and rate coding, and synaptic plasticity (STDP) — within the Makers Lab AI team.</li>
-            <li>Authored technical presentations evaluating SNNs as an energy-efficient, event-driven alternative to conventional neural network architectures.</li>
+            <li>Researched a class of AI models that mimics how the brain fires, as a more energy-efficient alternative to conventional approaches.</li>
+            <li>Presented the findings to the Makers Lab AI team, weighing where the approach is genuinely worth using.</li>
           </ul>
         </div>
       </li>
@@ -519,7 +414,7 @@
   <div class="wrap">
     <header class="section-head reveal">
       <p class="label">Toolkit</p>
-      <h2>What I reach for.</h2>
+      <h2>What I work with.</h2>
     </header>
 
     <div class="skills">
@@ -529,15 +424,15 @@
       </div>
       <div class="skill-group reveal">
         <p class="label">Frameworks</p>
-        <ul><li>React</li><li>React Native</li><li>Expo</li><li>Next.js</li><li>FastAPI</li><li>PyTorch</li><li>TensorFlow</li><li>scikit-learn</li><li>Pandas</li><li>NumPy</li><li>TanStack Query</li><li>Firebase</li></ul>
+        <ul><li>React</li><li>React Native</li><li>Expo</li><li>Next.js</li><li>FastAPI</li><li>PyTorch</li><li>TensorFlow</li><li>scikit-learn</li><li>Pandas</li><li>NumPy</li></ul>
       </div>
       <div class="skill-group reveal">
         <p class="label">Data &amp; infrastructure</p>
-        <ul><li>PostgreSQL</li><li>Supabase</li><li>Row-Level Security</li><li>Deno Edge Functions</li><li>Stripe · Connect</li><li>Google Cloud</li><li>Docker</li><li>EAS</li></ul>
+        <ul><li>PostgreSQL</li><li>Supabase</li><li>Stripe</li><li>Google Cloud</li><li>Docker</li><li>Firebase</li></ul>
       </div>
       <div class="skill-group reveal">
         <p class="label">Tools</p>
-        <ul><li>Git · GitHub</li><li>GitHub Actions</li><li>Claude Code</li><li>Codex</li><li>Cursor</li><li>Jira</li><li>PostHog</li><li>Sentry</li><li>n8n</li></ul>
+        <ul><li>Git · GitHub</li><li>Claude Code</li><li>Codex</li><li>Cursor</li><li>Jira</li><li>Figma-to-code</li><li>n8n</li></ul>
       </div>
     </div>
   </div>
@@ -548,10 +443,10 @@
   <div class="wrap">
     <div class="contact reveal">
       <p class="label">Contact</p>
-      <h2>If this is close to what your team builds, let's talk.</h2>
+      <h2>If any of this is close to what your team does, let's talk.</h2>
       <p class="contact-body">
         I'm open to software engineering and machine learning internships and new-grad roles.
-        The private repositories aren't a wall — ask and I'll walk you through any of them.
+        Most of the code above is private, but I'm glad to walk through any of it — just ask.
       </p>
 
       <div class="boundary-rule contact-rule" aria-hidden="true"></div>

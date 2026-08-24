@@ -92,18 +92,11 @@
 
   /* ── scroll reveals ────────────────────────────────────── */
   var revealables = document.querySelectorAll('.reveal');
-  var ledgers = document.querySelectorAll('[data-ledger]');
-
-  // Index each ledger row so the CSS can stagger it.
-  Array.prototype.forEach.call(ledgers, function (ledger) {
-    Array.prototype.forEach.call(ledger.querySelectorAll('.ledger-rows li'), function (row, i) {
-      row.style.setProperty('--row', i);
-    });
-  });
+  var cases = document.querySelectorAll('[data-case]');
 
   function showAll() {
     Array.prototype.forEach.call(revealables, function (el) { el.classList.add('is-in'); });
-    Array.prototype.forEach.call(ledgers, function (el) { el.classList.add('is-in'); });
+    Array.prototype.forEach.call(cases, function (el) { el.classList.add('is-in'); });
     var contact = document.querySelector('.contact');
     if (contact) { contact.classList.add('is-in'); }
   }
@@ -120,7 +113,7 @@
     }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
 
     Array.prototype.forEach.call(revealables, function (el) { io.observe(el); });
-    Array.prototype.forEach.call(ledgers, function (el) { io.observe(el); });
+    Array.prototype.forEach.call(cases, function (el) { io.observe(el); });
   }
 
   /* ── scroll-spy ────────────────────────────────────────── */

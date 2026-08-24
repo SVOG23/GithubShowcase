@@ -10,18 +10,19 @@ Live at **https://svog23.github.io/GithubShowcase/**
 
 ## Design
 
-The through-line across all five projects is that the client is never trusted — guarantees are
-enforced by the database, not the screen that asks for them. The page is built around that:
+Written for how recruiters actually read a portfolio: they scan for a few seconds, they are
+often not engineers, and they want to know what a thing does before how it was made.
 
-- **Guarantee ledger.** Each project carries a two-column table — what the client asks for, and
-  what actually decides the answer — split by a boundary rule that draws itself on scroll. It is
-  the page's signature element and recurs in the nav (as scroll progress) and under the hero.
-- **Two semantic accents.** Amber marks the claimed side, cyan the enforced side. Colour carries
-  meaning here rather than decorating.
-- **Type.** Bricolage Grotesque for display, IBM Plex Sans for body, IBM Plex Mono for labels and
-  the enforcement column.
-- **Motion** is orchestrated around the boundary motif: a hero load sequence, rules that draw,
-  ledger rows that stagger in. All of it is disabled under `prefers-reduced-motion`.
+- **Project index in the hero.** All five projects — name, one line, status — sit on the first
+  screen, so the page reads as project-first without any scrolling.
+- **Case-study blocks.** Each project is a short write-up plus a two-column panel: the problem
+  on one side, what came of it on the other. Amber marks the problem, cyan the outcome, so
+  colour carries the structure.
+- **Plain language.** Projects are described by what they do for people. Implementation detail
+  is deliberately left out; each one ends with a compact role and stack line instead.
+- **Type.** Bricolage Grotesque for display, IBM Plex Sans for body, IBM Plex Mono for labels.
+- **Motion** is orchestrated around the dividing rule: a hero load sequence, rules that draw,
+  problem and outcome arriving in order. All of it is disabled under `prefers-reduced-motion`.
 
 ## Files
 
@@ -63,5 +64,6 @@ GitHub Pages.
 - **Content** — inline in `index.html`; each project is one `<article class="project">`.
 - **Colour and type** — the `:root` and `html[data-theme="light"]` token blocks at the top of
   `assets/styles.css`.
-- **Adding a project** — copy an existing `<article class="project">`, give it a unique `id`, and
-  keep the `data-ledger` attribute so its rule and rows animate on scroll.
+- **Adding a project** — copy an existing `<article class="project">`, give it a unique `id`, keep
+  the `data-case` attribute so its divider and text animate on scroll, and add a matching row to
+  the hero's project index.
