@@ -424,9 +424,6 @@ html[data-theme="light"] .case { background: var(--ink-2); }
 .contact-list a:hover { color: var(--cyan); }
 .contact-list a:hover .jump-arrow { transform: translate(2px, -2px); }
 
-.contact-projects { margin-top: 26px; font-size: 13.4px; color: var(--dim); }
-.contact-projects a { color: var(--bone-2); text-decoration: none; border-bottom: 1px solid var(--rule-2); }
-.contact-projects a:hover { color: var(--cyan); border-color: var(--cyan); }
 
 /* ── footer ─────────────────────────────────────────────── */
 .footer { border-top: 1px solid var(--rule); padding: 30px 0 46px; }
