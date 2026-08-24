@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Suraj Vaghela — Software & ML Engineering Portfolio</title>
+<meta name="description" content="Selected engineering work by Suraj Vaghela: Vouchlist, ModelMarketplace, unrot, Clipr.AI and Kivo — shipped mobile apps, payments infrastructure and developer tooling." />
+<meta name="author" content="Suraj Vaghela" />
+<meta property="og:title" content="Suraj Vaghela — Software & ML Engineering Portfolio" />
+<meta property="og:description" content="Shipped mobile apps, payments infrastructure and developer tooling. Five projects, walked through in detail." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a0b0d'/><text y='.9em' x='50%25' text-anchor='middle' font-size='58' font-family='Georgia,serif' fill='%237c9cff'>S</text></svg>" />
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">SV</span>
+      <span class="brand-name">Suraj Vaghela</span>
+    </a>
+    <nav class="nav-links" aria-label="Section navigation">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle colour theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2 12h2.4M19.6 12H22M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1Z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ══════════════════════ HERO ══════════════════════ -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <p class="eyebrow reveal">Seattle, WA · Founder at ALPHABYTE</p>
+    <h1 class="hero-title reveal">
+      I build products that <em>ship</em> —<br />
+      and hold up under real users.
+    </h1>
+    <p class="hero-sub reveal">
+      Informatics (Data Science) student at the University of Washington. I work across
+      mobile, backend and payments infrastructure — an app live on both app stores, a
+      marketplace running real Stripe money flows, and a developer tool published on npm.
+    </p>
+    <div class="hero-actions reveal">
+      <a class="btn btn-primary" href="#work">See the work</a>
+      <a class="btn" href="mailto:suvaghela23@gmail.com">Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/suvaghela" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="hero-note reveal">
+      <span class="lock" aria-hidden="true">&#128274;</span>
+      Most of these repositories are private. This page is the walkthrough — architecture,
+      trade-offs and the parts I would want to talk through in an interview. Happy to screen-share
+      the code on request.
+    </p>
+  </div>
+
+  <div class="wrap">
+    <ul class="stat-strip reveal">
+      <li><strong>5</strong><span>projects shipped or in production</span></li>
+      <li><strong>2</strong><span>app stores live</span></li>
+      <li><strong>3</strong><span>Stripe payment architectures built</span></li>
+      <li><strong>1</strong><span>open-source CLI on npm</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══════════════════════ ABOUT ══════════════════════ -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-num">01</span>
+      <h2>About me</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <p class="lede">
+          I'm Suraj — a Seattle-based engineer studying Informatics with a Data Science focus at
+          the University of Washington, and the founder of <strong>ALPHABYTE</strong>.
+        </p>
+        <p>
+          Most of my time goes into taking products the whole distance: schema and row-level
+          security policies, the API and webhook layer, the mobile client, then the store review
+          queue. I care about the boring guarantees — money that can't be double-charged, a
+          reservation that can't be double-booked, an address a stranger can't read — because
+          those are the parts that decide whether something survives contact with real users.
+        </p>
+        <p>
+          Before founding ALPHABYTE I built an ML recommender on 6,000+ support tickets at
+          CloudifyAI Solutions and researched spiking neural networks with Tech Mahindra's Makers
+          Lab AI team. I lean heavily on AI coding agents — Claude Code, Codex, Gemini — which is
+          also how I ended up writing a linter for the config files that steer them.
+        </p>
+        <p>
+          I'm looking for software engineering and ML internships or new-grad roles where I can
+          own something end to end.
+        </p>
+      </div>
+
+      <aside class="about-side reveal">
+        <div class="card card-tight">
+          <h3 class="card-kicker">Education</h3>
+          <p class="edu-degree">B.S. Informatics <span class="edu-track">(Data Science)</span></p>
+          <p class="edu-school">University of Washington · Seattle, WA</p>
+          <ul class="mini-list">
+            <li><span class="dot"></span>Dean's List — 2024, 2025, 2026</li>
+            <li><span class="dot"></span>iStartup Lab Micro-Grant recipient, 2026</li>
+          </ul>
+          <p class="edu-course">
+            <span class="card-kicker">Coursework</span>
+            Data Structures &amp; Algorithms · Introduction to Machine Learning · Introduction to AI ·
+            Client-Side Development · Intermediate Data Programming · Elements of Statistical Methods ·
+            Research Methods
+          </p>
+        </div>
+        <div class="card card-tight">
+          <h3 class="card-kicker">Certification</h3>
+          <p class="cert">Generative AI Fundamentals — Machine Learning &amp; AI<span>Google Cloud</span></p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ WORK ══════════════════════ -->
+<section class="section" id="work">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-num">02</span>
+      <h2>Selected work</h2>
+      <p class="section-sub">Five projects, newest first. Each one is described the way I'd walk a reviewer through it.</p>
+    </div>
+
+    <!-- ─── VOUCHLIST ─── -->
+    <article class="project reveal" id="vouchlist">
+      <div class="project-index">01</div>
+      <div class="project-body">
+        <header class="project-head">
+          <div>
+            <h3 class="project-title">Vouchlist</h3>
+            <p class="project-tagline">Trusted local recommendations from the people you actually know.</p>
+          </div>
+          <div class="badges">
+            <span class="badge badge-live">Live on iOS &amp; Android</span>
+            <span class="badge">ALPHABYTE</span>
+          </div>
+        </header>
+
+        <div class="project-links">
+          <a class="link-pill link-primary" href="https://www.vouchlist.app/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.7 4 5.7 4 9s-1.4 6.3-4 9c-2.6-2.7-4-5.7-4-9s1.4-6.3 4-9Z"/></svg>
+            vouchlist.app
+          </a>
+          <span class="link-pill link-muted"><span class="lock" aria-hidden="true">&#128274;</span> Private repository</span>
+        </div>
+
+        <p class="project-desc">
+          Vouchlist replaces the anonymous five-star review with a <em>vouch</em> from someone in your
+          circle. You find a plumber, a restaurant or a trip destination because a real person you're
+          connected to stood behind it. The app covers three domains — Home Services, Food &amp; Drinks,
+          and Travel — each with its own capture flow and detail schema, all sharing one social graph.
+          I designed, built and shipped it end to end, through Apple and Google review.
+        </p>
+
+        <h4 class="hl-head">Engineering highlights</h4>
+        <ul class="highlights">
+          <li><strong>Privacy-preserving friend discovery.</strong> Contacts are matched by SHA-256 phone hashes with a shared salt — the server never stores a readable phone book, but the graph still resolves the moment a hash matches a profile.</li>
+          <li><strong>Phone-OTP auth</strong> via Twilio Verify layered onto Supabase Auth, with a multi-step onboarding gate (profile → location → contacts → first vouch → circle) whose routing decision is a pure, unit-tested selector rather than a tangle of effects.</li>
+          <li><strong>~20 Postgres tables, row-level security on every one.</strong> Circles, memberships, invite codes, contact-graph entries, per-domain detail tables and block lists — visibility is enforced in the database, not by the client.</li>
+          <li><strong>26 screens on 10 React Context providers + TanStack Query</strong>, each provider a <code>[Provider, useHook]</code> tuple with optimistic writes and explicit invalidation.</li>
+          <li><strong>Deno edge functions with an auditable trust boundary.</strong> Every function's <code>verify_jwt</code> is declared in config, so the public/private boundary shows up in a diff; the public weekly-digest job is bounded by an atomic once-per-6-days gate and reads no request input.</li>
+          <li><strong>Invite deep links</strong> over universal links plus a custom scheme, with a static web fallback page for people who don't have the app yet.</li>
+          <li><strong>CI/CD through EAS Build and EAS Submit</strong>, with Sentry crash reporting and PostHog analytics wired into the release build.</li>
+        </ul>
+
+        <ul class="stack">
+          <li>TypeScript</li><li>React Native</li><li>Expo · Expo Router</li><li>Supabase</li>
+          <li>PostgreSQL + RLS</li><li>Deno Edge Functions</li><li>TanStack Query</li>
+          <li>Twilio Verify</li><li>EAS Build/Submit</li><li>Sentry</li><li>PostHog</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- ─── MODELMARKETPLACE ─── -->
+    <article class="project reveal" id="modelmarketplace">
+      <div class="project-index">02</div>
+      <div class="project-body">
+        <header class="project-head">
+          <div>
+            <h3 class="project-title">ModelMarketplace</h3>
+            <p class="project-tagline">A two-sided marketplace for trained ML models — buy it, or win it at auction.</p>
+          </div>
+          <div class="badges">
+            <span class="badge badge-award">iStartup Lab Micro-Grant, 2026</span>
+            <span class="badge">ALPHABYTE</span>
+          </div>
+        </header>
+
+        <div class="project-links">
+          <span class="link-pill link-muted"><span class="lock" aria-hidden="true">&#128274;</span> Private repository</span>
+        </div>
+
+        <p class="project-desc">
+          ML practitioners list trained models; buyers acquire them outright or win them at auction.
+          Underneath the product it's an end-to-end exercise in building a real payments system on
+          Stripe with strong server-side guarantees — multi-flow checkout, webhook reconciliation,
+          row-level security and business rules enforced by the database. The University of
+          Washington awarded it an iStartup Lab Micro-Grant for market viability and architectural rigor.
+        </p>
+
+        <h4 class="hl-head">Engineering highlights</h4>
+        <ul class="highlights">
+          <li><strong>One webhook, three flows.</strong> Purchase, auction settlement and tier subscription all land in a single handler and dispatch on a <code>transaction_type</code> metadata tag — set on both the Checkout Session <em>and</em> <code>subscription_data</code>, because the subscription lifecycle events only ever see the latter.</li>
+          <li><strong>Atomic, idempotent fulfillment.</strong> The transaction insert, model claim, ownership transfer, ledger append and seller-stat update all run inside one Postgres function keyed on a unique <code>stripe_session_id</code>. Stripe retries heal partial failures; duplicate events can't double-fulfill.</li>
+          <li><strong>Anti-abuse lives in the database, not the UI.</strong> Postgres triggers enforce per-tier listing quotas (3 / 25 / unlimited), a one-hour re-list cooldown, and a unique partial index blocking duplicate active titles. The API translates the resulting error codes into human messages — the client-side check is only a hint.</li>
+          <li><strong>Re-listing flips ownership instead of duplicating rows</strong>, so download counts, reviews and transaction history stay attached to one model identity across resales — which required an RLS policy that permits the write from the current seller <em>or</em> the current owner.</li>
+          <li><strong>Stripe Connect onboarding is a database guarantee</strong> — the schema refuses inserts from sellers without a connected account, so a bypassed UI check changes nothing.</li>
+          <li><strong>No hardcoded Price IDs.</strong> One-time and auction charges build <code>price_data</code> inline; subscriptions reuse a Price per (tier, interval, amount) via a Stripe <code>lookup_key</code>, so abandoned checkouts don't litter the account with objects.</li>
+          <li><strong>Three Supabase clients, chosen deliberately</strong> — browser (RLS under the caller), cookie-aware SSR, and service-role for webhooks — kept in separate files because mixing them silently breaks either auth or RLS.</li>
+        </ul>
+
+        <ul class="stack">
+          <li>Next.js 14 (App Router)</li><li>React 18</li><li>TypeScript</li>
+          <li>Supabase · Postgres + RLS</li><li>Stripe Checkout</li><li>Stripe Connect</li>
+          <li>Stripe Subscriptions</li><li>Webhooks</li><li>Recharts</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- ─── UNROT ─── -->
+    <article class="project reveal" id="unrot">
+      <div class="project-index">03</div>
+      <div class="project-body">
+        <header class="project-head">
+          <div>
+            <h3 class="project-title">unrot</h3>
+            <p class="project-tagline">A linter for the config files that steer your AI coding agents.</p>
+          </div>
+          <div class="badges">
+            <span class="badge badge-open">Open source · MIT</span>
+            <span class="badge">Published on npm</span>
+          </div>
+        </header>
+
+        <div class="project-links">
+          <a class="link-pill link-primary" href="https://github.com/unrot-dev/unrot" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="currentColor" stroke="none"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.9 10.9c.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.4-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.8 2.7 1.3 3.4 1 .1-.7.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 1.9 1.2 3.2 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+            github.com/unrot-dev/unrot
+          </a>
+          <a class="link-pill" href="https://www.npmjs.com/package/unrot" target="_blank" rel="noopener">npm i -D unrot</a>
+        </div>
+
+        <p class="project-desc">
+          Agent configs rot. The repo moves on — files get renamed, scripts get replaced, conventions
+          change — while <code>CLAUDE.md</code>, <code>AGENTS.md</code> and <code>.cursorrules</code>
+          quietly keep describing a codebase that no longer exists. Nothing checks them. unrot does:
+          pure static analysis plus git history, no network calls, no telemetry, no LLM calls, and it
+          never modifies your files. <code>npx unrot check</code> works at the root of any repo with
+          zero configuration.
+        </p>
+
+        <h4 class="hl-head">Engineering highlights</h4>
+        <ul class="highlights">
+          <li><strong>Seven rules with real teeth</strong> — broken references (with <em>“did you mean…”</em> recovery when a file has moved), oversized instruction files past where models stop following rules, cross-file contradictions, staleness measured against commit volume, eager <code>@</code>-imports, personal paths committed to shared configs, and repos with no agent config at all.</li>
+          <li><strong>Deliberately conservative heuristics.</strong> Broken-refs forgives monorepo-relative paths, build artifacts, gitignored-but-present files, placeholders, package specifiers, script families and hedged “if it exists” phrasing — the goal is that every reported error is worth fixing.</li>
+          <li><strong>Measured, not asserted.</strong> Precision was verified by hand on a 20-repo held-out corpus spanning Java, PHP, C#, Ruby, Go, C++ and Swift — ecosystems the rules were never tuned on — where 15 of 16 error-level findings held up. A mutation harness measures recall: <strong>354 of 356</strong> injected defects caught, with <strong>440 of 440</strong> negative controls staying quiet.</li>
+          <li><strong>Found real rot in the wild</strong> across 69 popular open-source repos — dead source references in Microsoft's VS Code Copilot config, a nonexistent path in OpenAI's Codex <code>AGENTS.md</code>, and a committed instruction pointing at one maintainer's laptop.</li>
+          <li><strong>Fleet mode</strong> scans an entire GitHub org — or a list, or a directory of clones — concurrently, and grades each repo A–D in one combined health report. Strictly read-only: it never opens PRs.</li>
+          <li><strong>Built to be a CI gate</strong> — stable versioned JSON schema, meaningful exit codes, and a copy-paste GitHub Actions job.</li>
+        </ul>
+
+        <ul class="stack">
+          <li>TypeScript</li><li>Node.js</li><li>CLI design</li><li>Static analysis</li>
+          <li>Git internals</li><li>npm publishing</li><li>GitHub Actions</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- ─── CLIPR.AI ─── -->
+    <article class="project reveal" id="clipr">
+      <div class="project-index">04</div>
+      <div class="project-body">
+        <header class="project-head">
+          <div>
+            <h3 class="project-title">Clipr.AI</h3>
+            <p class="project-tagline">Scan your hair, preview the cut, get the spec, then cut it yourself.</p>
+          </div>
+          <div class="badges">
+            <span class="badge badge-build">In development</span>
+            <span class="badge">Computer vision</span>
+          </div>
+        </header>
+
+        <div class="project-links">
+          <span class="link-pill link-muted"><span class="lock" aria-hidden="true">&#128274;</span> Private repository</span>
+        </div>
+
+        <p class="project-desc">
+          A six-stage pipeline — <strong>Scan → Understand → Preview → Specify → Cut → Verify</strong>.
+          You capture your hair from five guided angles, an AI analysis describes your current cut, you
+          pick a target (catalog preset or reference photo) and preview it on yourself, then receive a
+          precise <em>Barber Card</em> and a step-by-step <em>Cut Coach</em>. Rescan afterwards and the
+          app compares the real result against the target. The long game is a consented dataset mapping
+          <code>current hair → target spec → actual result</code>.
+        </p>
+
+        <h4 class="hl-head">Engineering highlights</h4>
+        <ul class="highlights">
+          <li><strong>One spec as the source of truth.</strong> HaircutSpec v1 is a versioned schema shared by preview generation, the Barber Card, the Cut Coach and any future model — so the four surfaces can never drift into describing different haircuts.</li>
+          <li><strong>Every AI capability sits behind a provider interface</strong> — segmentation, pose, hair analysis and preview generation — each with a working mock. Real providers (a vision LLM for analysis, FLUX.2 for previews, MediaPipe for segmentation and face landmarks) activate purely through environment variables.</li>
+          <li><strong>Mocks that fail closed.</strong> Hair analysis refuses to emit a canned result, and once a real inference URL is configured nothing silently falls back to a mock — a dead service fails loudly instead of quietly serving fiction.</li>
+          <li><strong>Photos of your face are treated as such.</strong> The mobile client holds only an anon key, storage is a private bucket with per-user folder policies, RLS covers every table, and captures are downscaled on-device before they ever leave the phone.</li>
+          <li><strong>Security tested as data, not vibes</strong> — an RLS suite driven through PostgREST, a full end-to-end data-journey test, and a SQL suite run inside the database with <code>ON_ERROR_STOP</code> so a missing privilege fails the run instead of skipping it.</li>
+          <li><strong>Honest scope.</strong> The README ships a limitations table — no AR measurement, per-view rather than joint multi-view generation, prompt-driven cross-view consistency — because overstating what a model does is how demos become liabilities.</li>
+        </ul>
+
+        <ul class="stack">
+          <li>React Native · Expo</li><li>TypeScript</li><li>Python · FastAPI</li>
+          <li>Supabase · RLS + private storage</li><li>MediaPipe</li><li>Vision LLM</li>
+          <li>FLUX.2 (BFL)</li><li>Docker</li><li>pytest · Jest</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- ─── KIVO ─── -->
+    <article class="project reveal" id="kivo">
+      <div class="project-index">05</div>
+      <div class="project-body">
+        <header class="project-head">
+          <div>
+            <h3 class="project-title">Kivo</h3>
+            <p class="project-tagline">Play anywhere — peer-to-peer sports equipment rental, billed by the minute.</p>
+          </div>
+          <div class="badges">
+            <span class="badge badge-build">MVP complete</span>
+            <span class="badge">Marketplace · Payments</span>
+          </div>
+        </header>
+
+        <div class="project-links">
+          <span class="link-pill link-muted"><span class="lock" aria-hidden="true">&#128274;</span> Private repository</span>
+        </div>
+
+        <p class="project-desc">
+          Find gear near you on a map, rent it by the hour, verify pickup with a code, play, verify the
+          return, and pay for the minutes you actually used. One account both rents and lends. What
+          makes it a marketplace rather than a form is that <strong>none of the money is decided on the
+          phone</strong> — the client is trusted with a listing ID and a time window, and nothing else.
+        </p>
+
+        <h4 class="hl-head">Engineering highlights</h4>
+        <ul class="highlights">
+          <li><strong>Price, commission and the clock all come from the server.</strong> Rental start and end are stamped by the database when each PIN verifies; the final charge is recomputed in SQL at return and captured through Stripe. The platform fee lives in a schema the client cannot reach.</li>
+          <li><strong>Double booking is a constraint, not a code path</strong> — a GiST exclusion constraint over listing and time range makes two overlapping live bookings impossible whatever the app does.</li>
+          <li><strong>A two-sided PIN handshake.</strong> The lender shows a pickup PIN the renter enters; the renter shows a return PIN the lender enters — so neither party can move the rental clock alone. The PINs live in a table with RLS on, zero policies and zero grants, unreachable through the API under any role; the only way in is a function that checks who's asking, what state the rental is in, and enforces attempt limits and lockout.</li>
+          <li><strong>Home addresses stay hidden.</strong> Exact pickup locations live in their own table visible only to the owner and a renter with a live booking; the public listing carries a deterministically jittered point (120–250 m, seeded from the listing ID) so it can't be averaged away by repeated polling.</li>
+          <li><strong>Manual-capture Connect destination charges.</strong> Reservation authorizes a hold; return captures only the minutes used with the commission as an application fee; overtime past the hold becomes its own off-session intent, because an authorization can't be captured beyond what it reserved. Every Stripe call carries a reservation-derived idempotency key, and webhooks claim Stripe's event ID on a primary key before any handler runs.</li>
+          <li><strong>Money and the clock are deliberately decoupled</strong> — the return PIN closes the rental in the database whether or not Stripe is reachable, and capture is a retriable follow-up.</li>
+          <li><strong>A hostile-client regression suite.</strong> Sixteen attacks — reading a stranger's address, inventing a price, rewriting a rental's totals, reading the counterparty's PIN, double booking — asserted to be refused, exiting non-zero on regression. It caught three real bugs during development, including a policy scoped to <code>updated_at</code> that silently re-opened access to a stranger's home address on any later row touch.</li>
+        </ul>
+
+        <ul class="stack">
+          <li>React Native · Expo SDK 57</li><li>TypeScript</li><li>Expo Router</li>
+          <li>Supabase · Postgres + RLS</li><li>Edge Functions</li><li>Realtime</li>
+          <li>Stripe Connect</li><li>TanStack Query</li><li>Reanimated</li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ══════════════════════ EXPERIENCE ══════════════════════ -->
+<section class="section" id="experience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-num">03</span>
+      <h2>Experience</h2>
+    </div>
+
+    <ol class="timeline">
+      <li class="tl-item reveal">
+        <div class="tl-marker"></div>
+        <div class="tl-content">
+          <div class="tl-head">
+            <h3>Founder</h3>
+            <span class="tl-date">Mar 2026 — Present</span>
+          </div>
+          <p class="tl-org">ALPHABYTE · Seattle, WA</p>
+          <ul class="tl-points">
+            <li>Shipped Vouchlist, a full-stack mobile app, to the Apple App Store and Google Play Store.</li>
+            <li>Built it with TypeScript, React Native, Expo, Deno, PostgreSQL and Supabase, using EAS Build and EAS Submit for CI/CD.</li>
+            <li>Designed a secure backend with row-level security policies and serverless edge functions, implementing phone-OTP authentication (Twilio Verify + Supabase Auth) and SHA-256 contact hashing for privacy-preserving friend discovery.</li>
+            <li>Architected client-side state across 26 screens using 10 React Context providers and TanStack Query, backed by ~20 Supabase tables.</li>
+            <li>Applied AI coding agents and LLM harnesses — Claude Code, Codex, Gemini — to accelerate system design, implementation and debugging.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="tl-item reveal">
+        <div class="tl-marker"></div>
+        <div class="tl-content">
+          <div class="tl-head">
+            <h3>Software Engineer Intern</h3>
+            <span class="tl-date">Jun 2025 — Nov 2025</span>
+          </div>
+          <p class="tl-org">CloudifyAI Solutions, Inc. · Seattle, WA</p>
+          <ul class="tl-points">
+            <li>Developed and deployed a recommender system trained on 6,000+ historical customer tickets to automatically suggest relevant solutions, improving response times and reducing support-team workload.</li>
+            <li>Automated customer support workflows in n8n, integrating the recommender with ticketing systems to deliver recommendations directly to customers or support agents.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="tl-item reveal">
+        <div class="tl-marker"></div>
+        <div class="tl-content">
+          <div class="tl-head">
+            <h3>Machine Learning Research Intern</h3>
+            <span class="tl-date">Aug 2024 — Sep 2024</span>
+          </div>
+          <p class="tl-org">Tech Mahindra · Redmond, WA</p>
+          <ul class="tl-points">
+            <li>Researched and documented spiking neural network fundamentals — spike-based signaling, temporal and rate coding, and synaptic plasticity (STDP) — within the Makers Lab AI team.</li>
+            <li>Authored technical presentations evaluating SNNs as an energy-efficient, event-driven alternative to conventional neural network architectures.</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════════════════════ SKILLS ══════════════════════ -->
+<section class="section" id="skills">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-num">04</span>
+      <h2>Technical skills</h2>
+    </div>
+
+    <div class="skills-grid">
+      <div class="card reveal">
+        <h3 class="card-kicker">Languages</h3>
+        <ul class="chips">
+          <li>Python</li><li>TypeScript</li><li>JavaScript</li><li>Java</li>
+          <li>SQL</li><li>R</li><li>HTML</li><li>CSS</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h3 class="card-kicker">Frameworks &amp; libraries</h3>
+        <ul class="chips">
+          <li>React</li><li>React Native</li><li>Expo</li><li>Next.js</li>
+          <li>FastAPI</li><li>PyTorch</li><li>TensorFlow</li><li>scikit-learn</li>
+          <li>Pandas</li><li>NumPy</li><li>TanStack Query</li><li>Firebase</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h3 class="card-kicker">Infrastructure &amp; data</h3>
+        <ul class="chips">
+          <li>PostgreSQL</li><li>Supabase</li><li>Row-Level Security</li><li>Deno Edge Functions</li>
+          <li>Stripe · Connect</li><li>Google Cloud</li><li>Docker</li><li>EAS Build/Submit</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h3 class="card-kicker">Tools &amp; platforms</h3>
+        <ul class="chips">
+          <li>Git · GitHub</li><li>GitHub Actions</li><li>Claude Code</li><li>Codex</li>
+          <li>Cursor</li><li>Jira</li><li>PostHog</li><li>Sentry</li><li>n8n</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ CONTACT ══════════════════════ -->
+<section class="section section-contact" id="contact">
+  <div class="wrap">
+    <div class="contact-card reveal">
+      <span class="section-num">05</span>
+      <h2>Let's talk</h2>
+      <p>
+        I'm open to software engineering and machine learning internships and new-grad roles.
+        If any of the above is close to what your team works on, I'd be glad to walk through
+        the code — private repos included.
+      </p>
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="mailto:suvaghela23@gmail.com">suvaghela23@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/suvaghela" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://www.vouchlist.app/" target="_blank" rel="noopener">Vouchlist</a>
+        <a class="btn" href="https://github.com/unrot-dev/unrot" target="_blank" rel="noopener">unrot on GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p>© <span id="year">2026</span> Suraj Vaghela · Seattle, WA</p>
+    <p class="footer-note">Built as a static site and hosted on GitHub Pages.</p>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
