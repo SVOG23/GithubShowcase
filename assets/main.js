@@ -1,82 +1,125 @@
-/* Portfolio behaviour: theme, scroll-spy, reveal-on-scroll. No dependencies. */
+/* Motion and state for the portfolio. No dependencies.
+   Everything here is a progressive enhancement: with JS off, or with
+   reduced motion on, the page is fully readable and every element visible. */
 (function () {
   'use strict';
 
   var root = document.documentElement;
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------- theme ---------- */
-  var STORAGE_KEY = 'sv-theme';
+  /* ── theme ─────────────────────────────────────────────── */
+  var KEY = 'sv-theme';
 
-  function readStoredTheme() {
-    try { return localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
+  function stored() {
+    try { return localStorage.getItem(KEY); } catch (e) { return null; }
   }
-  function storeTheme(value) {
-    try { localStorage.setItem(STORAGE_KEY, value); } catch (e) { /* private mode */ }
+  function store(v) {
+    try { localStorage.setItem(KEY, v); } catch (e) { /* private mode */ }
   }
 
-  var stored = readStoredTheme();
   var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-  root.setAttribute('data-theme', stored || (prefersLight ? 'light' : 'dark'));
+  root.setAttribute('data-theme', stored() || (prefersLight ? 'light' : 'dark'));
 
   var toggle = document.getElementById('themeToggle');
   if (toggle) {
     toggle.addEventListener('click', function () {
       var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
       root.setAttribute('data-theme', next);
-      storeTheme(next);
+      store(next);
     });
   }
 
-  /* ---------- nav border on scroll ---------- */
-  var nav = document.getElementById('nav');
-  function onScroll() {
-    if (nav) { nav.classList.toggle('scrolled', window.scrollY > 8); }
-  }
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
+  /* ── hero load sequence ────────────────────────────────── */
+  // Each [data-seq] element carries its position in the opening sequence;
+  // the CSS turns that into a transition-delay.
+  Array.prototype.forEach.call(document.querySelectorAll('[data-seq]'), function (el) {
+    el.style.setProperty('--seq', el.getAttribute('data-seq'));
+  });
 
-  /* ---------- reveal on scroll ---------- */
-  var revealables = document.querySelectorAll('.reveal');
-
-  if (!('IntersectionObserver' in window)) {
-    revealables.forEach(function (el) { el.classList.add('in'); });
+  function start() { document.body.classList.add('is-ready'); }
+  if (document.fonts && document.fonts.ready) {
+    // Wait for webfonts so the headline does not reveal mid-swap.
+    document.fonts.ready.then(start);
+    setTimeout(start, 900); // ...but never wait on a font that will not arrive
   } else {
-    var revealObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
-
-    revealables.forEach(function (el) { revealObserver.observe(el); });
+    start();
   }
 
-  /* ---------- scroll-spy ---------- */
+  /* ── nav: border + scroll progress ─────────────────────── */
+  var nav = document.getElementById('nav');
+  var progress = document.getElementById('navProgress');
+  var ticking = false;
+
+  function onFrame() {
+    ticking = false;
+    var y = window.scrollY || window.pageYOffset;
+    if (nav) { nav.classList.toggle('is-scrolled', y > 8); }
+    if (progress && !reduced) {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.transform = 'scaleX(' + (max > 0 ? Math.min(y / max, 1) : 0) + ')';
+    }
+  }
+  function onScroll() {
+    if (!ticking) { ticking = true; window.requestAnimationFrame(onFrame); }
+  }
+  onFrame();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+
+  /* ── scroll reveals ────────────────────────────────────── */
+  var revealables = document.querySelectorAll('.reveal');
+  var ledgers = document.querySelectorAll('[data-ledger]');
+
+  // Index each ledger row so the CSS can stagger it.
+  Array.prototype.forEach.call(ledgers, function (ledger) {
+    Array.prototype.forEach.call(ledger.querySelectorAll('.ledger-rows li'), function (row, i) {
+      row.style.setProperty('--row', i);
+    });
+  });
+
+  function showAll() {
+    Array.prototype.forEach.call(revealables, function (el) { el.classList.add('is-in'); });
+    Array.prototype.forEach.call(ledgers, function (el) { el.classList.add('is-in'); });
+    var contact = document.querySelector('.contact');
+    if (contact) { contact.classList.add('is-in'); }
+  }
+
+  if (reduced || !('IntersectionObserver' in window)) {
+    showAll();
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) { return; }
+        entry.target.classList.add('is-in');
+        io.unobserve(entry.target);
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+
+    Array.prototype.forEach.call(revealables, function (el) { io.observe(el); });
+    Array.prototype.forEach.call(ledgers, function (el) { io.observe(el); });
+  }
+
+  /* ── scroll-spy ────────────────────────────────────────── */
   var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
   var sections = links
-    .map(function (link) { return document.querySelector(link.getAttribute('href')); })
+    .map(function (a) { return document.querySelector(a.getAttribute('href')); })
     .filter(Boolean);
-
-  function setActive(id) {
-    links.forEach(function (link) {
-      link.classList.toggle('active', link.getAttribute('href') === '#' + id);
-    });
-  }
 
   if (sections.length && 'IntersectionObserver' in window) {
     var spy = new IntersectionObserver(function (entries) {
-      var visible = entries
+      var best = entries
         .filter(function (e) { return e.isIntersecting; })
         .sort(function (a, b) { return b.intersectionRatio - a.intersectionRatio; })[0];
-      if (visible) { setActive(visible.target.id); }
-    }, { rootMargin: '-45% 0px -50% 0px', threshold: [0, 0.25, 0.6] });
+      if (!best) { return; }
+      links.forEach(function (a) {
+        a.classList.toggle('is-active', a.getAttribute('href') === '#' + best.target.id);
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: [0, 0.2, 0.6] });
 
-    sections.forEach(function (section) { spy.observe(section); });
+    sections.forEach(function (s) { spy.observe(s); });
   }
 
-  /* ---------- footer year ---------- */
+  /* ── footer year ───────────────────────────────────────── */
   var year = document.getElementById('year');
   if (year) { year.textContent = String(new Date().getFullYear()); }
 })();
